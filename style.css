@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(22, 21, 21);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn {
+    position: relative;
+    display: block;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #ff7675;
+    text-transform: uppercase;
+    padding: 14px 60px;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ff7675;
+
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: 0.6s all ease;
+}
+
+.btn-1::before {
+    width: 0;
+    height: 100%;
+}
+
+.btn-1:hover::before {
+    width: 100%;
+}
+
+.btn-2::before {
+    width: 100%;
+    height: 0;
+}
+
+.btn-2:hover::before {
+    height: 100%;
+}
+
+.btn-3::before {
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-3:hover::before {
+    height: 390%;
+}
+
+.btn-4::before {
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-4:hover::before {
+    height: 390%;
+}
